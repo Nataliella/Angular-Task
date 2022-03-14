@@ -1,0 +1,33 @@
+<div id="topBar">
+    <button  class="btn btn-primary"  type="button" (click)="moreInfo()"> More</button> 
+    <button class="btn btn-primary" onClick="history.go(0);">Back </button>
+</div>
+
+
+<table id="rates" class="table table-success table-striped">
+    <thead>
+        <th>Short Name</th>
+		<th>Name</th>
+		<th>Buy</th>
+		<th>Sell</th>
+        <th>Valid from</th>
+        <th>Country</th>
+        <th>Amount</th>
+        <th>Version</th>
+    </thead>
+    <tbody>
+
+        <tr *ngFor="let user of users">
+            <td>{{user.shortName}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.valBuy}}</td>
+            <td>{{user.valSell}}</td>
+            <td>{{user.validFrom}} </td>
+	        <td>{{user.country}}</td>
+	        <td>{{user.amount}}</td>
+	        <td>{{user.version}}</td>
+            
+        </tr>
+    </tbody>
+</table>
+
